@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乡土风情 | 首页</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(46,139,87,0.75), rgba(30,80,50,0.85)),
+                url('images/scenery.jpg') center/cover no-repeat;
+            height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            border-bottom: 6px solid #2E8B57;
+        }
+        .hero-content {
+            animation: fadeInUp 1.2s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-content h1 {
+            font-size: 3.5em;
+            letter-spacing: 8px;
+            text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
+            margin-bottom: 12px;
+        }
+        .hero-content .subtitle {
+            font-size: 1.3em;
+            letter-spacing: 4px;
+            margin-bottom: 28px;
+        }
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 42px;
+            background: #fff;
+            color: #2E8B57;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            animation: btnPulse 2.5s infinite;
+        }
+        @keyframes btnPulse {
+            0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
+            70% { box-shadow: 0 0 0 16px rgba(255,255,255,0); }
+        }
+        .hero-btn:hover {
+            background: #2E8B57;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .entry-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            padding: 55px 40px;
+            background: #fdfaf5;
+        }
+        .entry-card {
+            flex: 1 1 220px;
+            max-width: 260px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.35s;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            position: relative;
+        }
+        .entry-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+            transform: skewX(-25deg);
+            transition: left 0.6s;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .entry-card:hover::after {
+            left: 125%;
+        }
+        .entry-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 18px 36px rgba(46,139,87,0.25);
+        }
+        .entry-card .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s;
+        }
+        .entry-card:hover .card-img {
+            transform: scale(1.08);
+        }
+        .entry-card h3 {
+            padding: 16px 10px 6px;
+            font-size: 1.3em;
+            color: #2E8B57;
+        }
+        .entry-card p {
+            padding: 0 14px 20px;
+            color: #777;
+        }
+        .home-highlight {
+            background: #fff;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .home-highlight h2 {
+            font-size: 2em;
+            color: #2E8B57;
+            letter-spacing: 3px;
+            display: inline-block;
+            position: relative;
+        }
+        .home-highlight h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #c0392b;
+            transition: width 0.5s;
+        }
+        .home-highlight:hover h2::after {
+            width: 100%;
+        }
+        .home-highlight .highlight-desc {
+            color: #888;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="scenery.html">风景特色</a></li>
+                <li><a href="food.html">特色美食</a></li>
+                <li><a href="culture.html">民俗文化</a></li>
+                <li><a href="routes.html">旅游路线</a></li>
+                <li><a href="about.html">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>重 庆</h1>
+            <p class="subtitle">山城 · 雾都 · 桥都 · 火锅之城</p>
+            <a href="scenery.html" class="hero-btn">探索重庆之美</a>
+        </div>
+    </section>
+
+    <section class="entry-cards">
+        <a href="scenery.html" class="entry-card">
+            <div class="card-img" style="background-image: url('images/scenery.jpg');"></div>
+            <h3>🏔 风景特色</h3>
+            <p>洪崖洞 · 磁器口 · 武隆天坑</p>
+        </a>
+        <a href="food.html" class="entry-card">
+            <div class="card-img" style="background-image: url('images/food.jpg');"></div>
+            <h3>🍲 特色美食</h3>
+            <p>火锅 · 小面 · 酸辣粉</p>
+        </a>
+        <a href="culture.html" class="entry-card">
+            <div class="card-img" style="background-image: url('images/culture.jpg');"></div>
+            <h3>🎭 民俗文化</h3>
+            <p>川江号子 · 铜梁龙舞</p>
+        </a>
+        <a href="about.html" class="entry-card">
+            <div class="card-img" style="background-image: url('images/about.jpg');"></div>
+            <h3>📖 城市简介</h3>
+            <p>8D魔幻 · 巴渝风情</p>
+        </a>
+    </section>
+
+    <section class="home-highlight">
+        <h2>「 行千里，致广大 」</h2>
+        <p class="highlight-desc">
+            重庆，一座依山而建、傍水而生的魔幻山水都市。长江与嘉陵江在此交汇，轻轨穿楼而过，吊脚楼层层叠叠。这里是火锅的发源地，是让人流连忘返的烟火人间。
+        </p>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>
