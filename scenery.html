@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风景特色 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .scenery-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.55)),
+                url('images/scenery.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.2em;
+            letter-spacing: 6px;
+            border-bottom: 5px solid #127b40;
+        }
+        .scenery-list {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+        .scenery-item {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .scenery-item:hover {
+            box-shadow: 0 10px 30px rgba(46,139,87,0.2);
+        }
+        .scenery-item .scenery-img {
+            width: 42%;
+            float: left;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 14px 0 0 14px;
+            transition: transform 0.5s, filter 0.5s;
+        }
+        .scenery-item:hover .scenery-img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        .scenery-item .scenery-info {
+            width: 58%;
+            float: right;
+            padding: 30px 35px;
+            box-sizing: border-box;
+            transition: transform 0.4s;
+        }
+        .scenery-item:hover .scenery-info {
+            transform: translateX(8px);
+        }
+        .scenery-item:nth-child(even) .scenery-img {
+            float: right;
+            border-radius: 0 14px 14px 0;
+        }
+        .scenery-item:nth-child(even) .scenery-info {
+            float: left;
+        }
+        .scenery-info h3 {
+            font-size: 1.6em;
+            color: #2E8B57;
+            margin-bottom: 8px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #e0e0e0;
+            letter-spacing: 2px;
+        }
+        .scenery-info .location {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .scenery-info p {
+            line-height: 1.9;
+            color: #555;
+            text-indent: 2em;
+        }
+        .tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2E8B57;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 4px 6px 4px 0;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .tag:hover {
+            background: #2E8B57;
+            color: #fff;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media (max-width: 768px) {
+            .scenery-item .scenery-img,
+            .scenery-item .scenery-info {
+                width: 100%;
+                float: none;
+            }
+            .scenery-item .scenery-img {
+                height: 200px;
+                border-radius: 14px 14px 0 0;
+            }
+            .scenery-item:nth-child(even) .scenery-img {
+                border-radius: 14px 14px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="scenery.html" class="active">风景特色</a></li>
+                <li><a href="food.html">特色美食</a></li>
+                <li><a href="culture.html">民俗文化</a></li>
+                <li><a href="routes.html">旅游路线</a></li>
+                <li><a href="about.html">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="scenery-hero">🏔 重庆 · 风景特色</div>
+
+    <section class="scenery-list">
+        <article class="scenery-item clearfix">
+            <img src="images/honyadong.jpg" alt="洪崖洞" class="scenery-img">
+            <div class="scenery-info">
+                <h3>洪崖洞</h3>
+                <span class="location">📍 渝中区 · 嘉陵江畔</span>
+                <p>洪崖洞是重庆最具代表性的地标之一，依山而建的吊脚楼群在夜晚灯火通明，宛如《千与千寻》中的奇幻世界。层层叠叠的建筑从江边一直延伸到山顶，是游客必到的打卡圣地。</p>
+                <div>
+                    <span class="tag">夜景</span>
+                    <span class="tag">吊脚楼</span>
+                    <span class="tag">网红打卡</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="scenery-item clearfix">
+            <img src="images/ciqikou.jpg" alt="磁器口古镇" class="scenery-img">
+            <div class="scenery-info">
+                <h3>磁器口古镇</h3>
+                <span class="location">📍 沙坪坝区 · 嘉陵江畔</span>
+                <p>磁器口古镇始建于宋代，千年历史沉淀在青石板路上。陈麻花、毛血旺、手工糍粑遍布街巷，古色古香的明清建筑让人仿佛穿越回旧时的巴渝码头。</p>
+                <div>
+                    <span class="tag">古镇</span>
+                    <span class="tag">千年历史</span>
+                    <span class="tag">小吃街</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="scenery-item clearfix">
+            <img src="images/tianshengsanqiao.jpg" alt="武隆天坑" class="scenery-img">
+            <div class="scenery-info">
+                <h3>武隆天生三桥</h3>
+                <span class="location">📍 武隆区 · 仙女山镇</span>
+                <p>武隆天生三桥是世界自然遗产，三座天然石桥横跨峡谷。《满城尽带黄金甲》与《变形金刚4》在此取景。天坑底部仰望天空，方能体会大自然的鬼斧神工。</p>
+                <div>
+                    <span class="tag">世界遗产</span>
+                    <span class="tag">自然奇观</span>
+                    <span class="tag">电影取景</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="scenery-item clearfix">
+            <img src="images/liziba.jpg" alt="李子坝轻轨" class="scenery-img">
+            <div class="scenery-info">
+                <h3>李子坝轻轨穿楼</h3>
+                <span class="location">📍 渝中区 · 李子坝站</span>
+                <p>轻轨2号线穿楼而过的奇特景观火遍全网。站台设在居民楼内，全世界罕见。每天大量游客等候列车驶过，只为拍下那魔幻瞬间。</p>
+                <div>
+                    <span class="tag">8D魔幻</span>
+                    <span class="tag">轻轨</span>
+                    <span class="tag">网红景点</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

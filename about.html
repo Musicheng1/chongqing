@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市简介 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(30,60,50,0.65), rgba(20,40,30,0.75)),
+                url('images/about.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.2em;
+            letter-spacing: 6px;
+            border-bottom: 5px solid #2E8B57;
+        }
+        .about-container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 45px 30px;
+            background: #fdfaf5;
+        }
+        .about-intro {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            line-height: 2.1;
+            color: #444;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+        .about-intro h2 {
+            text-align: center;
+            color: #2E8B57;
+            font-size: 1.8em;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e8e8e8;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .about-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background: #c0392b;
+            border-radius: 2px;
+            transition: width 0.5s;
+        }
+        .about-intro:hover h2::after {
+            width: 80px;
+        }
+        .drop-cap::first-letter {
+            font-size: 3.5em;
+            float: left;
+            color: #2E8B57;
+            font-weight: 700;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+        }
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .info-card {
+            flex: 1 1 200px;
+            max-width: 280px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            border-top: 4px solid #2E8B57;
+            transition: all 0.3s;
+        }
+        .info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 26px rgba(46,139,87,0.2);
+        }
+        .info-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 8px;
+        }
+        .info-card h4 {
+            color: #2E8B57;
+            letter-spacing: 2px;
+        }
+        .info-card p {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="scenery.html">风景特色</a></li>
+                <li><a href="food.html">特色美食</a></li>
+                <li><a href="culture.html">民俗文化</a></li>
+                <li><a href="routes.html">旅游路线</a></li>
+                <li><a href="about.html" class="active">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-hero">📖 重庆 · 城市简介</div>
+
+    <section class="about-container">
+        <article class="about-intro">
+            <h2>山城 · 雾都 · 桥都 · 8D魔幻之城</h2>
+            <p class="drop-cap">重庆，简称"渝"，地处中国西南部，长江与嘉陵江交汇之处，是中国四大直辖市之一。重庆拥有三千多年悠久历史，是巴渝文化的发祥地。这座城市依山而建，建筑层层叠叠，道路蜿蜒起伏，形成了独特的"山城"风貌。由于地势低洼、水汽充沛，重庆常年多雾，素有"雾都"之称。整座城市横跨两江，拥有超过一万座桥梁，又被誉为"中国桥都"。</p>
+            <p>重庆总面积约8.24万平方公里，常住人口超过3200万。夜幕降临后的重庆更加迷人，洪崖洞的金色灯火、南滨路的璀璨夜景、解放碑的繁华商圈，共同构成了重庆丰富多彩的城市画卷。</p>
+        </article>
+
+        <div class="info-row">
+            <div class="info-card">
+                <div class="icon">🏙</div>
+                <h4>直辖市</h4>
+                <p>中国四大直辖市之一<br>西部重要中心城市</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">👥</div>
+                <h4>人口大城</h4>
+                <p>常住人口超3200万<br>中国人口最多城市</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🌉</div>
+                <h4>中国桥都</h4>
+                <p>桥梁数量超10000座<br>两江交汇山水之城</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🏔</div>
+                <h4>8D魔幻</h4>
+                <p>轻轨穿楼·楼顶马路<br>立体交通世界罕见</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

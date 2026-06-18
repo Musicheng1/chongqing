@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游路线 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .routes-hero {
+            background: linear-gradient(rgba(46,139,87,0.65), rgba(30,80,50,0.75)),
+                url('images/route.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.2em;
+            letter-spacing: 6px;
+            border-bottom: 5px solid #2E8B57;
+        }
+        .routes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 45px 30px;
+            background: #fdfaf5;
+        }
+        .route-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-left: 5px solid #2E8B57;
+        }
+        .route-card:hover {
+            box-shadow: 0 10px 28px rgba(46,139,87,0.2);
+            transform: translateY(-4px);
+        }
+        .route-img {
+            width: 40%;
+            float: left;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .route-card:hover .route-img {
+            transform: scale(1.03);
+        }
+        .route-info {
+            width: 60%;
+            float: right;
+            padding: 25px 30px;
+            box-sizing: border-box;
+        }
+        .route-card:nth-child(even) .route-img {
+            float: right;
+        }
+        .route-card:nth-child(even) .route-info {
+            float: left;
+        }
+        .route-info h3 {
+            font-size: 1.5em;
+            color: #2E8B57;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .route-info .route-tagline {
+            color: #c0392b;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .route-info ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        .route-info ul li {
+            padding: 5px 0;
+            color: #555;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: baseline;
+        }
+        .route-info ul li::before {
+            content: '▸ ';
+            color: #2E8B57;
+            font-weight: bold;
+        }
+        .route-info .day-label {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2E8B57;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            letter-spacing: 1px;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media (max-width: 768px) {
+            .route-img,
+            .route-info {
+                width: 100%;
+                float: none;
+            }
+            .route-img {
+                height: 200px;
+            }
+            .route-card:nth-child(even) .route-img {
+                float: none;
+            }
+            .route-card:nth-child(even) .route-info {
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="scenery.html">风景特色</a></li>
+                <li><a href="food.html">特色美食</a></li>
+                <li><a href="culture.html">民俗文化</a></li>
+                <li><a href="routes.html" class="active">旅游路线</a></li>
+                <li><a href="about.html">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="routes-hero">🗺️ 重庆 · 旅游路线推荐</div>
+
+    <section class="routes-container">
+        <!-- 路线一：魔幻都市一日游 -->
+        <article class="route-card clearfix">
+            <img src="images/route1.jpg" alt="魔幻都市一日游" class="route-img">
+            <div class="route-info">
+                <h3>🏙️ 魔幻都市一日游</h3>
+                <p class="route-tagline">打卡8D魔幻地标，感受山城心跳</p>
+                <ul>
+                    <li><span class="day-label">上午</span> 李子坝轻轨穿楼 → 鹅岭二厂文创园</li>
+                    <li><span class="day-label">中午</span> 解放碑商圈品尝重庆小面</li>
+                    <li><span class="day-label">下午</span> 洪崖洞吊脚楼群 → 长江索道</li>
+                    <li><span class="day-label">晚上</span> 南山一棵树观景台看夜景</li>
+                </ul>
+                <p style="color:#888; font-size:0.9em;">⭐ 亮点：轻轨穿楼、洪崖洞夜景、空中索道</p>
+            </div>
+        </article>
+
+        <!-- 路线二：古镇非遗两日游 -->
+        <article class="route-card clearfix">
+            <img src="images/route2.jpg" alt="古镇非遗两日游" class="route-img">
+            <div class="route-info">
+                <h3>🏮 古镇非遗两日游</h3>
+                <p class="route-tagline">穿越千年古镇，感受巴渝文化</p>
+                <ul>
+                    <li><span class="day-label">Day1</span> 磁器口古镇（陈麻花、毛血旺）→ 川江号子实景演出</li>
+                    <li><span class="day-label">Day2</span> 铜梁龙舞体验 → 梁平木版年画工坊</li>
+                </ul>
+                <p style="color:#888; font-size:0.9em;">⭐ 亮点：三大国家级非遗一次集齐，亲手拓印年画</p>
+            </div>
+        </article>
+
+        <!-- 路线三：武隆自然奇观两日游 -->
+        <article class="route-card clearfix">
+            <img src="images/route3.jpg" alt="武隆自然奇观两日游" class="route-img">
+            <div class="route-info">
+                <h3>⛰️ 武隆自然奇观两日游</h3>
+                <p class="route-tagline">世界遗产·电影取景地·极限挑战</p>
+                <ul>
+                    <li><span class="day-label">Day1</span> 天生三桥（《变4》取景地）→ 龙水峡地缝</li>
+                    <li><span class="day-label">Day2</span> 仙女山国家森林公园 → 归途品尝武隆碗碗羊肉</li>
+                </ul>
+                <p style="color:#888; font-size:0.9em;">⭐ 亮点：世界自然遗产、喀斯特地貌奇观</p>
+            </div>
+        </article>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

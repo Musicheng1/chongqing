@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色美食 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .food-hero {
+            background: linear-gradient(rgba(180,60,30,0.55), rgba(120,30,10,0.7)),
+                url('images/food.jpg') center/cover no-repeat;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.2em;
+            letter-spacing: 6px;
+            border-bottom: 5px solid #c0392b;
+        }
+        .food-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 45px 25px;
+            background: #fdfaf5;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #2E8B57;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+        }
+        .section-title::before { content: '—— '; color: #c0392b; }
+        .section-title::after  { content: ' ——'; color: #c0392b; }
+        .food-grid {
+            overflow: hidden;
+        }
+        .food-card {
+            width: 30%;
+            float: left;
+            margin: 0 1.66% 35px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+            transition: all 0.35s;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        .food-card:nth-child(3n+1) { clear: left; }
+        .food-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(to right, #e74c3c, #f39c12);
+            transition: width 0.4s;
+            z-index: 2;
+        }
+        .food-card:hover::before {
+            width: 100%;
+        }
+        .food-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 16px 38px rgba(46,139,87,0.25);
+        }
+        .food-card .food-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s;
+        }
+        .food-card:hover .food-img {
+            transform: scale(1.08);
+        }
+        .food-card .food-body {
+            padding: 20px 18px 22px;
+        }
+        .food-body h3 {
+            font-size: 1.3em;
+            color: #c0392b;
+            letter-spacing: 2px;
+        }
+        .food-body .food-en {
+            font-size: 0.8em;
+            color: #bbb;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .food-body p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.7;
+        }
+        .food-body .spicy {
+            display: inline-block;
+            color: #e74c3c;
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+        .food-grid::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media (max-width: 768px) {
+            .food-card { width: 46%; margin: 0 2% 30px; }
+            .food-card:nth-child(3n+1) { clear: none; }
+            .food-card:nth-child(2n+1) { clear: left; }
+        }
+        @media (max-width: 500px) {
+            .food-card { width: 96%; margin: 0 2% 25px; float: none; }
+            .food-card:nth-child(n) { clear: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="scenery.html">风景特色</a></li>
+                <li><a href="food.html" class="active">特色美食</a></li>
+                <li><a href="culture.html">民俗文化</a></li>
+                <li><a href="routes.html">旅游路线</a></li>
+                <li><a href="about.html">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="food-hero">🍲 重庆 · 特色美食</div>
+
+    <section class="food-container">
+        <h2 class="section-title">舌尖上的重庆</h2>
+        <div class="food-grid">
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/huoguo1.jpg');"></div>
+                <div class="food-body">
+                    <h3>重庆火锅</h3>
+                    <span class="food-en">Chongqing Hot Pot</span>
+                    <p>麻辣鲜香，牛油锅底浓郁醇厚。毛肚、鸭肠、黄喉是必点三宝，九宫格是灵魂。</p>
+                    <span class="spicy">🌶🌶🌶 辣度：★★★★★</span>
+                </div>
+            </div>
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/xiaomian.jpg');"></div>
+                <div class="food-body">
+                    <h3>重庆小面</h3>
+                    <span class="food-en">Chongqing Noodles</span>
+                    <p>一碗小面，十几种佐料。清晨街边蹲着吃面的场景是重庆最地道的生活画面。</p>
+                    <span class="spicy">🌶🌶 辣度：★★★★☆</span>
+                </div>
+            </div>
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/suanlafen.jpg');"></div>
+                <div class="food-body">
+                    <h3>酸辣粉</h3>
+                    <span class="food-en">Hot & Sour Noodles</span>
+                    <p>红薯粉条晶莹剔透，酸辣开胃，花生碎和榨菜增添丰富口感，街头巷尾随处可见。</p>
+                    <span class="spicy">🌶🌶🌶 辣度：★★★☆☆</span>
+                </div>
+            </div>
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/maoxuewang.jpg');"></div>
+                <div class="food-body">
+                    <h3>毛血旺</h3>
+                    <span class="food-en">Mao Xue Wang</span>
+                    <p>鸭血、毛肚、午餐肉在麻辣汤底中翻滚，起源于磁器口，是江湖菜的代表之作。</p>
+                    <span class="spicy">🌶🌶🌶🌶 辣度：★★★★★</span>
+                </div>
+            </div>
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/laziji.jpg');"></div>
+                <div class="food-body">
+                    <h3>歌乐山辣子鸡</h3>
+                    <span class="food-en">Spicy Chicken</span>
+                    <p>鸡丁炸至酥香，与大量干辣椒花椒翻炒。在辣椒堆里找鸡块是最大乐趣。</p>
+                    <span class="spicy">🌶🌶🌶🌶 辣度：★★★★★</span>
+                </div>
+            </div>
+            <div class="food-card">
+                <div class="food-img" style="background-image: url('images/honyouchaosho.jpg');"></div>
+                <div class="food-body">
+                    <h3>红油抄手</h3>
+                    <span class="food-en">Wontons in Chili Oil</span>
+                    <p>皮薄馅嫩的抄手浇上秘制红油，撒上葱花芝麻，一口一个，香辣鲜美。</p>
+                    <span class="spicy">🌶🌶 辣度：★★★☆☆</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

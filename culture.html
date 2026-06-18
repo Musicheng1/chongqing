@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>民俗文化 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .culture-hero {
+            background: linear-gradient(rgba(80,40,20,0.6), rgba(50,20,10,0.7)),
+                url('images/culture.jpg') center/cover no-repeat;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.2em;
+            letter-spacing: 6px;
+            border-bottom: 5px solid #8B4513;
+        }
+        .culture-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 45px 30px;
+            background: #fdfaf5;
+        }
+        .culture-section {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+            padding: 30px 35px;
+            border-left: 5px solid #2E8B57;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .culture-section::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 5px;
+            height: 0;
+            background: #c0392b;
+            transition: height 0.5s;
+        }
+        .culture-section:hover::after {
+            height: 100%;
+        }
+        .culture-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+        .culture-section::before {
+            content: '◆';
+            position: absolute;
+            left: -18px;
+            top: 20px;
+            font-size: 1.5em;
+            color: #2E8B57;
+            background: #fdfaf5;
+            padding: 4px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .culture-section h3 {
+            font-size: 1.5em;
+            color: #2E8B57;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px dotted #ddd;
+            position: relative;
+        }
+        .culture-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #c0392b;
+            border-radius: 2px;
+        }
+        .culture-section p {
+            line-height: 2;
+            color: #555;
+            text-indent: 2em;
+            font-size: 1.05em;
+            margin-top: 12px;
+        }
+        .culture-section p::first-letter {
+            font-size: 2.5em;
+            float: left;
+            color: #c0392b;
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 8px;
+            margin-top: 4px;
+        }
+        /* 文化图片样式 */
+        .culture-img {
+            width: 240px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 0 15px 20px;
+            float: right;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.4s ease;
+        }
+        .culture-section:hover .culture-img {
+            transform: scale(1.03);
+        }
+        @media (max-width: 600px) {
+            .culture-img {
+                float: none;
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto 20px;
+            }
+        }
+        .culture-tags {
+            margin-top: 12px;
+            clear: both;
+        }
+        .culture-tags span {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 14px;
+            border-radius: 16px;
+            font-size: 0.85em;
+            margin: 3px 5px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .culture-tags span:hover {
+            background: #2E8B57;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🏮 乡土风情 </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="scenery.html">风景特色</a></li>
+                <li><a href="food.html">特色美食</a></li>
+                <li><a href="culture.html" class="active">民俗文化</a></li>
+                <li><a href="routes.html">旅游路线</a></li>
+                <li><a href="about.html">城市简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="culture-hero">🎭 重庆 · 民俗文化</div>
+
+    <section class="culture-container">
+        <!-- 川江号子 -->
+        <article class="culture-section">
+            <img src="images/culture1.jpg" alt="川江号子" class="culture-img">
+            <h3>川江号子 —— 长江上的生命之歌</h3>
+            <p>川江号子是长江上游船工们世代传唱的劳动号子，已有千年历史。在险滩密布的川江航道上，船工们用雄浑的号子统一节奏、鼓舞士气。号子声时而高亢激昂，时而低沉婉转，记录着巴渝人民与大自然搏斗的壮丽诗篇。2006年被列入国家级非物质文化遗产名录，成为重庆文化的重要符号。</p>
+            <div class="culture-tags">
+                <span>国家级非遗</span><span>劳动号子</span><span>长江文化</span>
+            </div>
+        </article>
+
+        <!-- 铜梁龙舞 -->
+        <article class="culture-section">
+            <img src="images/culture2.jpg" alt="铜梁龙舞" class="culture-img">
+            <h3>铜梁龙舞 —— 火龙飞舞闹新春</h3>
+            <p>铜梁龙舞起源于明代，是重庆铜梁区最具特色的民间艺术。每逢春节和重大庆典，数十米长的巨龙在街头翻腾起舞，铁水打出的火花如流星般洒落，形成"火龙"奇观。铜梁龙舞以其气势磅礴、技艺精湛而闻名全国，被誉为"中华第一龙"，多次登上央视春晚舞台。</p>
+            <div class="culture-tags">
+                <span>国家级非遗</span><span>龙舞之乡</span><span>春节庆典</span>
+            </div>
+        </article>
+
+        <!-- 梁平木版年画 -->
+        <article class="culture-section">
+            <img src="images/culture3.jpg" alt="梁平木版年画" class="culture-img">
+            <h3>梁平木版年画 —— 巴渝民间的色彩记忆</h3>
+            <p>梁平木版年画起源于明代，与四川绵竹年画、天津杨柳青年画并称为中国三大年画。它以梨木雕刻版、手工拓印，色彩浓烈奔放，线条粗犷有力，题材多为门神、戏曲人物和吉祥图案。每逢春节，家家户户张贴年画祈福纳祥，这一习俗延续数百年，承载着巴渝人民对美好生活的朴素向往。2006年，梁平木版年画被列入国家级非物质文化遗产名录。</p>
+            <div class="culture-tags">
+                <span>国家级非遗</span><span>传统美术</span><span>春节民俗</span>
+            </div>
+        </article>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 乡土风情 · 重庆介绍网站</p>
+        <p>山城重庆 · 巴渝文化 · 美食之都</p>
+    </footer>
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>
